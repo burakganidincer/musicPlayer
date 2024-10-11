@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/cb06fec0a1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Music Player-->
+    <div class="music-player">
+      <!-- Play List-->
+      <button id="playlist">
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+      <!-- Play List End -->
+      <!-- Singer Photo-->
+      <img src="assets/aşkın.jpg" alt="" id="song-image" />
+      <!-- Singer Photo End-->
+
+      <!-- Song Detail -->
+      <div class="song-details">
+        <p id="song-name">Allah'tan Kork</p>
+        <p id="song-artist">Aşkın Nur Yengi & Mehmet Erdem</p>
+      </div>
+      <!-- Song Detail End-->
+
+      <!--Play Options-->
+      <div class="player-options">
+        <button id="shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+        <button id="prev">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button id="play">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="pause" class="hide">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+        <button id="next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <button id="repeat">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+      <!-- Play Options end -->
+      <!-- Sound Check -->
+      <audio id="audio" preload="metadata" src="assets/aşkın.mp3"></audio>
+      <!-- Sound Check End -->
+      <!-- Progress Bar -->
+      <div id="progress-bar">
+        <div id="current-progress"></div>
+      </div>
+      <!-- Progress Bar End -->
+      <!-- Timing -->
+      <div class="time-container">
+        <span id="current-time">01.23</span>
+        <span id="max-duration">02.45</span>
+      </div>
+      <!-- Timing End -->
+      <!--Song List-->
+      <div id="playlist-container" class="">
+        <button id="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <ul id="playlist-songs"></ul>
+      </div>
+      <!-- Song List End -->
+    </div>
+    <!-- Music Player end-->
+
+    <!-- Js connect -->
+    <script src="main.js"></script>
+  </body>
+</html>
